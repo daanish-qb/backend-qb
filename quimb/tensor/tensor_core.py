@@ -4660,7 +4660,7 @@ class TensorNetwork(object):
             # useful short circuit  as it maintains the index structure exactly
             ix, = inds
             t, = tn.ind_map[ix]
-            t.gate_(G, ix)
+            tn[t].gate_(G, ix)
             return tn
 
         ndimG = ndim(G)
